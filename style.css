@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+:root {
+	--white-dark: #fefcfc;
+	--white-light: #ffffff;
+	--dark: #1e1e1e;
+	--green: #00d19b;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	height: 100%;
+	width: 100vw;
+	background: var(--white-dark);
+	color: var(--dark);
+	overflow-x: hidden;
+}
+
+.container {
+	width: 75%;
+	height: 100%;
+	margin: 2rem auto;
+}
+
+.main {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-buttons {
+	position: absolute;
+	top: 50%;
+	max-width: 900px;
+	width: 100%;
+	padding: 0 5px;
+	color: var(--white-light);
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-buttons i {
+	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.left-content {
+	flex: 1;
+	display: flex;
+	width: 100%;
+	padding: 1rem;
+	margin-right: 2rem;
+	flex-direction: column;
+}
+
+.big-img {
+	position: relative;
+}
+
+.big-img > img {
+	width: 100%;
+	max-width: 900px;
+}
+
+.right-content {
+	flex: 1;
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	font-size: 0.9rem;
+	padding: 1rem;
+}
+
+.small-imgs {
+	display: grid;
+	max-width: 100%;
+	margin-top: 1rem;
+	max-width: 900px;
+
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 10px;
+}
+
+.small-imgs > img {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	object-fit: cover;
+}
+
+.right-content > h2 {
+	font-size: 2rem;
+	font-family: 'DM Serif Display';
+	font-weight: 600;
+}
+
+.product-tagline {
+	font-weight: 600;
+}
+
+.product-desc {
+	font-weight: 500;
+	line-height: 1.5rem;
+}
+
+.stars {
+	color: var(--green);
+}
+
+.rating {
+	color: var(--green);
+}
+
+a {
+	color: var(--dark);
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.9rem;
+}
+
+p {
+	font-size: 0.9rem;
+}
+
+.active {
+	border: 1px solid #000000;
+	background: var(--dark) !important;
+	color: var(--white-light) !important;
+}
+
+.product-buttons > button {
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+	margin-right: 1rem;
+	min-width: 150px;
+	font-size: 0.9rem;
+	border: 1px solid #000000;
+	color: var(--dark);
+	background: var(--white-light);
+	font-weight: 500;
+}
+
+.footer {
+	background: var(--white-light);
+	margin-top: 3rem;
+	width: 100%;
+}
+
+.footer-contents {
+	display: flex;
+	width: 75%;
+	padding: 2rem 0;
+	margin: 0 auto;
+	font-family: 'Poppins', sans-serif;
+	justify-content: space-between;
+}
+
+.footer-content {
+	display: flex;
+	color: var(--dark);
+	margin-right: 2rem;
+	line-height: 1.5rem;
+	align-items: flex-start;
+}
+
+.footer-info {
+	margin-left: 1rem;
+}
+
+.footer-info > h3 {
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+	.container {
+		width: 90%;
+	}
+
+	.footer-contents {
+		width: 90%;
+	}
+
+	.footer-content {
+		margin-right: 1rem;
+	}
+
+	.product-desc {
+		font-weight: 500;
+		line-height: 1rem;
+	}
+
+	.left-content {
+		flex: 1;
+		margin-right: 0;
+	}
+
+	.right-content {
+		flex: 1;
+		margin-top: 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		font-size: 0.9rem;
+		padding: 0;
+		padding-left: 1rem;
+	}
+}
+
+@media (max-width: 830px) {
+	.main {
+		flex-direction: column;
+	}
+
+	.big-img {
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	.big-img > img {
+		object-fit: cover;
+	}
+
+	.right-content > * {
+		margin-bottom: 10px;
+	}
+
+	.small-imgs {
+		display: grid;
+		width: 100%;
+		margin-top: 1rem;
+		grid-template-columns: repeat(5, 1fr);
+		grid-gap: 10px;
+	}
+
+	.nav-buttons {
+		width: 100%;
+	}
+
+	.right-content {
+		flex: 1;
+		margin-top: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		font-size: 0.9rem;
+		padding: 1rem;
+	}
+
+	.product-buttons {
+		display: flex;
+		max-width: 300px;
+		flex-direction: column;
+	}
+
+	.product-buttons > button {
+		margin-bottom: 10px;
+	}
+
+	.footer-contents {
+		flex-direction: column;
+	}
+
+	.footer-content {
+		margin-bottom: 1rem;
+		line-height: 1rem;
+	}
+
+	.fa-shield-alt {
+		margin-left: 7px;
+	}
+}
